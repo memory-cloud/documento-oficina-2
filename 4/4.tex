@@ -1,0 +1,46 @@
+\chapter{Requisitos do Sistema}
+
+\section{Requisitos Funcionais}
+
+% Apresentar os requisitos funcionais, que especificam ações que o sistema deve ser capaz de executar, ou seja, as funções do sistema. Classifique as funcionalidades quanto a prioridade: 
+% Essencial ? deve ser implementado para que o sistema funcione. 
+% Importante ? sem este requisito o sistema pode funcionar, mas não da maneira esperada.
+% Desejável ? este tipo de requisito não compromete o funcionamento do sistema.
+
+\begin{center}
+	\begin{tabular}{ | C{1cm} | m{11.7cm}| m{2.3cm} | } 
+		\hline
+		\textbf{ID} & \textbf{Funcionalidade} 							& \textbf{Prioridade} \\ \hline
+		RF1 		& Salvar inteiros, floats, booleans e strings. 		& Essencial \\ \hline
+		RF2 		& Carregar inteiros, floats, booleans e strings. 	& Essencial \\ \hline
+		RF3 		& Usar o Facebook para realizar login. 				& Essencial \\ \hline
+		RF4			& Suportar múltiplos jogos. 						& Essencial \\ \hline
+		RF5			& Gerar Leaderboards a partir dos inteiros.			& Importante \\ \hline
+		RF6			& Sistema de achievements.							& Desejável \\ \hline
+	\end{tabular}
+\end{center}
+
+\section{Requisitos Não-Funcionais}
+
+% Descrever os requisitos não-funcionais do sistema, que especificam restrições sobre os serviços ou funções providas pelo sistema, categorizando de acordo com a característica envolvida, como: Usabilidade, Padronização, Ambiente, Compatibilidade, Recursos, etc.
+
+\begin{center}
+	\begin{tabular}{ | C{1cm} | m{11.7cm}| m{2.3cm} | } 
+		\hline
+		\textbf{ID} & \textbf{Requisito}												& \textbf{Categoria} \\ \hline
+		RNF1 		& O sistema deve ser configurável através de variáveis de ambiente.	& Usabilidade \\ \hline
+		RNF2 		& Save deve ser feito em uma requisição ao servidor. 				& Usabilidade \\ \hline
+		RNF3 		& Load deve ser feito em uma requisição ao servidor. 				& Usabilidade \\ \hline
+		RNF4 		& Os Leaderboards devem ficar no cache por 120 segundos. 			& Usabilidade \\ \hline
+	\end{tabular}
+\end{center}
+
+\pagebreak
+
+\section{Diagramas de Casos de Uso}
+
+% Inclua aqui os diagramas de Casos de Uso desenvolvidos para o sistema, usando os IDs dos itens anteriores como referência quando necessário.
+
+\begin{figure}[ht!]
+	\includegraphics[width=\textwidth]{./4/casodeuso.png}
+\end{figure}

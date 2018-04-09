@@ -1,0 +1,43 @@
+\chapter{Descrição Geral do Sistema} 
+
+\section{Objetivos(Gerais e Específicos)}
+
+% Apresentar de forma clara o foco do projeto, com uma descrição em linhas gerais da solução a ser desenvolvida. Deve ser descrita a delimitação da solução, que define o ponto central do projeto. Dentro de uma idéia geral do projeto, ressaltar a idéia específica efetivamente a ser desenvolvida, definindo o objetivo geral.
+
+% Para cumprir o objetivo geral é preciso delimitar metas mais específicas dentro do trabalho. São elas que, somadas, conduzirão ao desfecho do objetivo geral. Os objetivos específicos são as ações ou passos que colaboram para alcançar o objetivo geral, e também são delimitadores do escopo do trabalho, ou seja, são ações de interesse que levam ao objetivo geral, restringindo o escopo do trabalho a ser desenvolvido. Enfim, os objetivos específicos devem ser cumpridos para se chegar ao objetivo geral.
+
+
+Como foi descrito na seção anterior, um desenvolvedor de jogos Unity quando necessita de uma ferramenta de persistência de progresso online para algum de seus projetos, deve optar por restritos serviços que têm alto custo financeiro e possuem seu código fechado.
+
+Como alternativa a esta situação, o objetivo geral deste projeto pode ser definido como: desenvolver uma solução open-source para o salvamento de progresso em jogos que utilizam a Engine Unity. Uma Engine nada mais é que uma biblioteca, um pacote de funcionalidades que são disponibilizadas para facilitar o desenvolvimento de um jogo e impedir que sua criação tenha seja feita do zero.
+
+Por meio da delimitação do objetivo geral, é possível traçar alguns objetivos específicos que visam trazer mais portabilidade ao projeto:
+
+\begin{itemize}
+	\item A ferramenta deve ter seu código aberto e totalmente personalizável, para que desenvolvedores possam utilizá-la da forma que melhor atender suas demandas;
+	\item De forma a unificar um pouco do processo, usuários de jogos que utilizem a ferramenta deverão iniciar sessão na rede social Facebook para que o servidor colete as informações;
+	\item Informações geradas pelos progressos dos jogos estarão disponíveis em um website para que desenvolvedores e usuários interajam com a ferramenta, por meio da criação de rankings.
+\end{itemize}
+
+\section{Limites e Restrições}
+
+% Limitar o escopo da solução a ser desenvolvida, descrevendo as necessidades que, a princípio, podem ser consideradas da alçada da aplicação mas não serão implementadas. Apresentar restrições tecnológicas ou de projeto, como por exemplo para qual ambiente será desenvolvida a solução ou um orçamento/prazo máximo previsto. Descreva aqui todas as restrições que o software apresenta com relação a desenvolvimento, implantação, uso, ou qualquer outra situação detectada. As restrições podem ser de compatibilidade, de segurança, de ambiente, de manutenibilidade, de operacionalidade, etc.
+
+Alguns dos limites do projeto inicial contemplam:
+
+\begin{itemize}
+	\item O sistema será monoplataforma para autenticação, utilizando apenas o Facebook para logar-se. Outras formas de autenticação podem ser implementadas posteriormente;
+	\item O sistema restringe seu funcionamento a jogos que utilizam a engine Unity para salvamento de progressos;
+	\item A única forma de interação entre usuários será, inicialmente, feita por meio dos rankings. Outras formas de interação deverão ser consideradas no futuro, como compartilhamento de informações e progressos entre usuários.
+\end{itemize}
+
+\section{Descrição dos Usuários do Sistema}
+
+% Apresentar os atores que serão envolvidos na solução, bem como o papel de cada ator. Deve ser descrito para qual tipo de empresa se destina o sistema e os tipos de usuários que o utilizarão.
+
+Os principais usuários finais do projeto deverão ser:
+
+\begin{description}
+	\item[Desenvolvedor] O desenvolvedor de jogos com a engine Unity será o principal usuário da ferramenta. Por meio dela, ele deverá ser capaz de implementar, dentro de seus projetos, formas para manter a persistência dos progressos realizados dentro dos jogos. Como a ferramenta possui código aberto, o desenvolvedor poderá adaptá-la da forma que melhor atender suas demandas. Ele poderá contar com bibliotecas predefinidas para evitar que o jogo perca seu progresso toda vez que seja reiniciado.
+	\item[Jogador] O jogador de jogos que utilizam a ferramenta para persistir as informações de progresso poderá acompanhar seus avanços por meio de um site, cuja autenticação se dá por meio de login pelo Facebook. No site será possível acompanhar um ranking com amigos que também joguem games que utilizam a ferramenta.
+\end{description}

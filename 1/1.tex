@@ -1,0 +1,67 @@
+\chapter{Introdução} 
+
+\section{Contexto}
+
+% Descrever o cenário atual do negócio a ser impactado pela aplicação. Apresentar o tema do projeto, de forma clara, apresentando ao leitor a área a ser abordada, produtos ou estudos semelhantes.
+
+Ferramentas para persistência de progressos de jogos Unity, no cenário atual, são pouco acessíveis para desenvolvedores. Serviços nesse segmento são caros, além de existirem poucas variedades. Nenhuma destas ferramentas possuem um código open source. Desenvolvedores de jogos de pequenas empresas, sofrem atualmente para que seus progressos de jogos possam ser salvos, enquanto trabalham em melhorias ou a continuidade de seus jogos. 
+
+As ferramentas gratuitas no mercado atualmente, trabalham com jogos na Steam ou com jogos completos, não sendo possível que o desenvolvedor teste e ainda assim mantenha seu progresso, sem a versão final.
+
+Das ferramentas mais utilizadas, temos PlayFab e GameSparks. Para questão de comparação, usaremos a PlayFab. A ferramenta oferece:
+
+\begin{itemize}
+	\item Multiplataforma de autenticação, para que os players possam jogar em vários dispositivos. 
+	\item Armazenamento de informações do jogador e estado do jogo na nuvem para que os dados nunca sejam perdidos.
+	\item Compartilhamento de vários dispositivos e jogos.
+	\item Compartilhamento com outros jogadores.
+	\item Escolha do nível de acesso do cliente do jogo.
+	\item Estatísticas do jogador para placares, matchmaking e segmentação.
+	Suporte.
+\end{itemize}
+
+Para que as empresas possam utilizar esses serviços, o preço de início do pacote Professional é de US\$299/mês.
+
+\section{Justificativa}
+
+% Descrever a abordagem do projeto, de modo a comunicar seu propósito e importância a todas as pessoas envolvidas. Deve ficar claro por que os clientes e usuários finais precisam da solução. Deve-se utilizar o tempo presente para falar do problema atual e tempo futuro para falar da situação do negócio quando a nova solução for implantada.
+
+% Recomenda-se utilizar as seguintes perguntas para este capítulo:
+% - Qual é o problema?
+% - Quem é afetado por este problema?
+% - Qual o impacto deste problema no ambiente estudado?
+
+Com o crescente mercado de jogos e interesse de novos desenvolvedores tanto em startups quanto individuais, fazer parte da comunidade desenvolvedora de jogos vem sendo um desafio. Ferramentas como PlayFab têm acesso limitado por possuírem código fechado, alta complexidade de desenvolvimento e configuração e assinaturas dispendiosas. 
+
+O projeto de uma ferramenta de persistência de jogos será de muita importância tanto para usuários de jogos Unity quanto para desenvolvedores. A API de outras ferramentas, além de muito custosas são muito complicadas. A API a ser desenvolvida é mais simplificada, pois possui conceitos similares à API da própria Unity, além da vantagem de custo. Com esta nova abordagem, usuários normais poderão interagir gratuitamente com amigos do Facebook através de rankings. Aos desenvolvedores, o benefício virá pela tentativa de trazer um tempo menor de desenvolvimento, tendo como um dos requisitos uma curva menor de aprendizado de uso da ferramenta.
+
+A implementação do projeto teria como primeiro impacto ser uma alternativa open source aos serviços pagos. Por ser de código livre, cada desenvolvedor poderá personalizar o back-end seguindo o gosto pessoal e estilo de programação, além de poder personalizar o próprio servidor, de acordo com as preferências. Sobre finanças, reforça-se que é uma ferramenta open source e os usuários não precisariam pagar para fazer uso dela.
+
+
+\section{Proposta}
+
+% Descrever a solução que será implantada com o desenvolvimento do sistema. Apresentar o impacto do sistema, e como ele soluciona o problema observado.
+
+% Apresentar uma descrição em linhas gerais da solução a ser desenvolvida. Independente do que será implementado, este item visa o entendimento global do projeto.
+
+O projeto será uma ferramenta de servidor que guardará o progresso de jogos Unity. O cliente estará usando o Facebook como identificador de usuários, criando rankings e cada jogo será salvo somente uma vez para que progresso atual possa prescrever o anterior. O usuário deverá logar primeiramente no facebook para que o jogo seja salvo.
+
+Para o desenvolvedor, teremos uma API simplificada onde o usuário desenvolvedor irá configurar na própria plataforma Unity o cliente e poderá usar o servidor personalizado ou disponibilizado por padrão. O ranking que será mostrado ao cliente também poderá ser personalizado pelo desenvolvedor. 
+
+
+\section{Organização do Documento}
+
+O documento está estruturado em tópicos, ou capítulos, onde cada tópico aborda uma ideia central e divide esta ideia em subtópicos.
+
+O tópico seguinte aborda a Descrição Geral do Sistema, aonde serão apresentados objetivos gerais e específicos do sistema, bem como algumas de suas restrições e os usuários que poderão se beneficiar do produto.
+
+O terceiro tópico trata do Desenvolvimento do Projeto, abordando algumas das tecnologias e ferramentas utilizadas para implementação do projeto; alguns dos métodos e processos utilizados para que o projeto se desenvolva, bem como os artefatos gerados durante os mesmos; traçar um plano de metas que ajudará na elaboração de um cronograma de desenvolvimento.
+
+O quarto tópico trata dos requisitos envolvidos no projeto. Os requisitos serão levantados e classificados como funcionais ou não-funcionais e por meio de sua interpretação será possível a elaboração de diagramas de caso de uso para melhor visualização dos stakeholders e ações que os mesmos poderão performar no produto.
+
+O quinto tópico trata da arquitetura do sistema. Analisar a arquitetura do software, fazer um mapeamento dos dados e como eles se distribuem no modelo lógico e apresentar diagramas de classes e de atividades.
+
+O sexto tópico trata da implementação. Por meio de protótipos de tela e detalhamento da codificação, o documento retratará alguns aspectos do que foi desenvolvido no projeto.
+
+O sétimo e último tópico discutirá os resultados da aplicação do produto, impactos e considerações finais.
+
