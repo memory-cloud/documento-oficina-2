@@ -19,18 +19,10 @@ MongoDB para persistência e Redis para cache.
 
 \subsubsection{Desenvolvimento}
 
-\begin{itemize}
-	\item Unity3D 2017.0f3
-	\item Visual Studio Code
-	\item Jetbrains Rider
-	\item Kitematic
-	\item GraphiQL App
-	\item GitHub
-	\item Heroku
-	\item MongoDB Atlas
-	\item RedisLabs
-	\item Travis-CI
-\end{itemize}
+\begin{description}
+	\item[Servidor] NodeJS, Express, Mongoose, Kitematic, GitHub
+	\item[Cliente] Unity3D 2017.0f3, Jetbrains Rider
+\end{description}
 
 \subsubsection{Documentação}
 
@@ -43,7 +35,7 @@ MongoDB para persistência e Redis para cache.
 	\item Cloudcraft
 \end{itemize}
 
-\subsubsection{Gerenciamento}
+\subsubsection{Gerenciamento do Projeto}
 
 \begin{itemize}
 	\item GitHub(boards, projects, issues, milestones)
@@ -52,15 +44,15 @@ MongoDB para persistência e Redis para cache.
 
 \section{Metodologia de desenvolvimento(ciclo de vida e equipe)}
 
+% Apresentar o modelo de ciclo de vida ou processo a ser utilizado e o motivo da escolha. Descrever como o modelo vai ser aplicado na realização do projeto (quantidade de protótipos, ou fases, definição de módulos e artefatos, etc.) conforme o modelo escolhido.
+
 O desenvolvimento será iterativo e incremental a equipe é composta por:
 
 \begin{description}
-	\item[Product Owner] asd
-	\item[Development Team] asd
-	\item[Scrum Master] asd
+	\item[Product Owner] 2DverseStudio
+	\item[Development Team] Caio Thizio, Dafny Garcia, Rafael Santos
+	\item[Scrum Master] Rafael Santos
 \end{description}
-
-% Apresentar o modelo de ciclo de vida ou processo a ser utilizado e o motivo da escolha. Descrever como o modelo vai ser aplicado na realização do projeto (quantidade de protótipos, ou fases, definição de módulos e artefatos, etc.) conforme o modelo escolhido.
 
 \begin{figure}[ht!]
 	\includegraphics[width=\textwidth]{./3/scrum.png}
@@ -71,12 +63,29 @@ O desenvolvimento será iterativo e incremental a equipe é composta por:
 	\item[Product Backlog] funcionalidades ordenadas de acordo com sua importância.
 	\item[Sprint Planning] reunião para definir o Sprint Backlog.
 	\item[Sprint Backlog] lista de funcionalidades a serem implementadas no Sprint.
-	\item[Sprint] fase de implementação do que foi definido no Sprint Backlog.
+	\item[Sprint] fase de implementação do que foi definido no Sprint Backlog, terá duração de uma semana.
+	\item[Sprint Review] 
 	\item[Daily Scrum] reuniões diárias para deixar o time a par do desenvolvimento, realizadas via Discord.
-	\item[Sprint Review] reunião para definir .
 	\item[Sprint Retrospective] reunião de retrospectiva do Sprint, para definir o que pode ser melhorado no processo.
 \end{description}
 
 \section{Cronograma Previsto}
 
 % Definir o cronograma de desenvolvimento do projeto. Elaborar o cronograma por semana, definindo o responsável por cada tarefa. O cronograma deve contemplar todas as tarefas previstas no processo de desenvolvimento de software definido para o desenvolvimento do sistema.
+
+\begin{center}
+	\begin{tabular}{ | C{1cm} | m{11cm}| C{3.7cm} | } 
+		\hline
+		\textbf{Data} & \textbf{Tarefa} 											& \textbf{Responsáveis} \\ \hline
+		13/03	 	& Concebimento da ideia						 					& Caio, Dafny, Rafael \\ \hline
+		20/03 		& Coleta de requisitos										 	& Rafael \\ \hline
+		27/03 		& Classificação de requisitos 									& Caio, Dafny \\ \hline
+		03/04		& Início da redação do documento(capítulos 1, 2 e 3)			& Dafny \\ \hline
+		10/04		& Término da redação do documento(capítulos 1, 2 e 3) e redação	& Caio, Dafny, Rafael \\ \hline
+		17/04		& Início do desenvolvimento do projeto e documentação			& Caio, Dafny, Rafael \\ \hline
+		24/04		& Configuração inicial do servidor								& Caio \\ \hline
+		01/05		& Autenticação com Facebook(cliente e servidor)					& Dafny \\ \hline
+		08/05		& Salvamento e carregamento do progresso						& Rafael \\ \hline
+		15/05		& Quadro de liderança(ranking)									& Caio, Dafny, Rafael \\ \hline
+	\end{tabular}
+\end{center}
