@@ -17,6 +17,7 @@
 		RF4			& Suportar múltiplos jogos. 						& Essencial \\ \hline
 		RF5			& Gerar Leaderboards a partir dos inteiros.			& Importante \\ \hline
 		RF6			& Sistema de achievements.							& Desejável \\ \hline
+		RF7			& Dashboard para configuração dos jogos.			& Essencial \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -25,14 +26,14 @@
 % Descrever os requisitos não-funcionais do sistema, que especificam restrições sobre os serviços ou funções providas pelo sistema, categorizando de acordo com a característica envolvida, como: Usabilidade, Padronização, Ambiente, Compatibilidade, Recursos, etc.
 
 \begin{center}
-	\begin{tabular}{ | C{1cm} | m{11.7cm}| m{2.3cm} | } 
+	\begin{tabular}{ | C{1cm} | m{9.4cm}| m{2.3cm} | m{2.3cm} | } 
 		\hline
-		\textbf{ID} & \textbf{Requisito}												& \textbf{Categoria} \\ \hline
-		RNF1 		& O sistema deve ser configurável através de variáveis de ambiente.	& Usabilidade \\ \hline
-		RNF2 		& Save deve ser feito em uma requisição ao servidor. 				& Usabilidade \\ \hline
-		RNF3 		& Load deve ser feito em uma requisição ao servidor. 				& Usabilidade \\ \hline
-		RNF4 		& Os Leaderboards devem ficar no cache por 120 segundos. 			& Usabilidade \\ \hline
-		RNF5 		& O servidor deve utilizar a porta 80.					 			& Usabilidade \\ \hline
+		\textbf{ID} & \textbf{Requisito}												& \textbf{Categoria}	& \textbf{Prioridade} 	\\ \hline
+		RNF1 		& As senhas dos usuários do Dashboard devem ser criptografadas.		& Segurança 			& Essencial				\\ \hline
+		RNF2 		& Save deve ser feito em uma requisição ao servidor. 				& Usabilidade 			& Importante 			\\ \hline
+		RNF3 		& Load deve ser feito em uma requisição ao servidor. 				& Usabilidade 			& Importante			\\ \hline
+		RNF4 		& Os Leaderboards devem ficar no cache por 120 segundos. 			& Usabilidade 			& Desejável				\\ \hline
+		RNF5 		& O servidor deve utilizar o protocolo HTTPS.					 	& Usabilidade			& Essencial				\\ \hline
 	\end{tabular}
 \end{center}
 

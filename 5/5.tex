@@ -10,18 +10,17 @@
 
 \begin{figure}[ht!]
 	\includegraphics[width=\textwidth]{./5/arquitetura.png}
-	\fonte{https://cloudcraft.co}
 \end{figure}
 
 \pagebreak
 
 \section{Modelo do Banco de Dados}
 
-\subsection{Modelo Conceitual}
+% \subsection{Modelo Conceitual}
 
 % Apresentar o Diagrama Entidade-Relacionamento desenvolvido para o banco de dados do sistema.
 
-O sistema gerenciador de banco de dados usado é não relacional, os dados são guardados como documentos em formato JSON.
+% O sistema gerenciador de banco de dados usado é não relacional, os dados são guardados como documentos em formato JSON.
 
 \subsection{Modelo Lógico}
 
@@ -29,16 +28,117 @@ O sistema gerenciador de banco de dados usado é não relacional, os dados são gua
 
 \begin{figure}[ht!]
 	\includegraphics[width=\textwidth]{./5/der.png}
-	\fonte{MySQL Workbench}
 \end{figure}
 
 \subsection{Dicionário de Dados}
 
 % Apresentar o dicionário de dados do banco de dados. Documentar cada tabela com seus atributos mostrando nome do atributo, tipo, tamanho, descrição, se é obrigatório ou não, e o que mais for necessário para descrever os dados. Documentar também usuários, stored procedures, funções e qualquer outra implementação ligada ao banco de dados.
+\subsubsection{Entidade: admin}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | } 
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		id 				& ObjectID 		& 					&						& Sim \\ \hline
+		email 			& String 		& 			100		& 						& Sim \\ \hline
+		password		& String 		& 			200		& Hash usando bcrypt	& Sim \\ \hline
+	\end{tabular}
+\end{center}
 
-\begin{figure}[ht!]
-	\includegraphics{./5/legenda.png}
-\end{figure}
+\subsubsection{Entidade: achievement}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | } 
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		id 				& ObjectID 		& 					&						& Sim \\ \hline
+		title 			& String 		& 			200		& 						& Sim \\ \hline
+		description		& String 		& 			200		& 						& Sim \\ \hline
+		game			& ObjectID 		& 					& 						& Sim \\ \hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{Entidade: game}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | }  
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		id 				& ObjectID 		& 					&						& Sim \\ \hline
+		appid 			& String 		& 			50		& Facebook App ID		& Sim \\ \hline
+		key 			& String 		& 			200		& Facebook App Token	& Sim \\ \hline
+		admin			& ObjectID 		& 					& 						& Sim \\ \hline
+		achievements	& [ObjectID]	& 					& 						& Sim \\ \hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{Entidade: integerDict}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | }  
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		key				& String 		& 		100			&						& Sim \\ \hline
+		value 			& Integer 		& 					& 						& Sim \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\subsubsection{Entidade: floatDict}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | }  
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		key				& String 		& 		100			&						& Sim \\ \hline
+		value 			& Float 		& 					& 						& Sim \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\subsubsection{Entidade: stringDict}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | }  
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		key				& String 		& 		100			&						& Sim \\ \hline
+		value 			& String 		& 		200			& 						& Sim \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\subsubsection{Entidade: boolDict}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | }  
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		key				& String 		& 		100			&						& Sim \\ \hline
+		value 			& Bool	 		& 					& 						& Sim \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\subsubsection{Entidade: achievementDone}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | }  
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} & \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		id				& ObjectID 		& 					& Achievement ID		& Sim \\ \hline
+		date 			& DateTime		& 					& 						& Sim \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\subsubsection{Entidade: user}
+\begin{center}
+	\begin{tabular}{ | m{2.5cm} | m{3.3cm}| C{1.7cm} | m{4cm} | C{2cm} | } 
+		\hline
+		\textbf{Nome} 	& \textbf{Tipo} 	& \textbf{Tamanho}	& \textbf{Descrição}	& \textbf{Obrigatório} \\ \hline
+		id				& ObjectID 			& 					&						& Sim \\ \hline
+		fbid			& String 			& 		100			& Facebook Scoped ID	& Sim \\ \hline
+		game			& ObjectID 			& 					&						& Sim \\ \hline
+		strings			& [stringDict]		& 					& Array de stringDict	& Não \\ \hline
+		integers		& [integerDict]		& 					& Array de integerDict	& Não \\ \hline
+		floats			& [floatDict]		& 					& Array de floatDict	& Não \\ \hline
+		booleans		& [boolDict]		& 					& Array de boolDict		& Não \\ \hline
+		achievements	& [achievementDone]	& 					& Array de achievements	& Sim \\ \hline
+	\end{tabular}
+\end{center}	
 
 \pagebreak
 
@@ -50,6 +150,33 @@ O sistema gerenciador de banco de dados usado é não relacional, os dados são gua
 	\includegraphics[width=\textwidth]{./5/diagramadeclasses.png}
 \end{figure}
 
+\pagebreak
+
 \section{Diagrama de Atividades}
 
 % Apresentar o diagrama de atividades, que representa o detalhamento de tarefas e o fluxo de uma atividade para outra de um sistema. Nem todas as tarefas do sistema necessitam de um detalhamento, portanto deve-se considerar no que o diagrama irá auxiliar na implementação do sistema  para decidir quais atividades devem ser descritas.
+
+\subsection{Login}
+\begin{figure}[ht!]
+	\includegraphics[width=\textwidth]{./5/diagramadeatividadeslogin.png}
+\end{figure}
+
+\pagebreak
+
+\subsection{Novo Jogo}
+\begin{figure}[ht!]
+	\includegraphics[width=\textwidth]{./5/diagramadeatividadesnovojogo.png}
+\end{figure}
+
+\pagebreak
+\subsection{Gerenciar Achievements}
+\begin{figure}[ht!]
+	\includegraphics[width=\textwidth]{./5/diagramadeatividadesachievement.png}
+\end{figure}
+\pagebreak
+
+\section{Diagrama de Sequencia}
+\subsection{Requisição}
+\begin{figure}[ht!]
+	\includegraphics[width=\textwidth]{./5/diagramadesequencia.png}
+\end{figure}
